@@ -30,10 +30,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "ts-loader",
         },
       },
     ],
@@ -48,11 +48,14 @@ module.exports = {
   ],
 
   devtool: "source-map",
+  devtool: false,
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, "./dist"),
     },
     compress: true,
-    // port: 8001, // default 8080
   },
 };

@@ -14,3 +14,6 @@ const elvenGauntletsRecipe = {
 
 console.log(elevenShieldRecipe);
 console.log(elvenGauntletsRecipe);
+
+const age: number = 99;
+console.log(age);
